@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Drag {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = null;
 		String browser = "chrome";
 		
@@ -20,13 +20,16 @@ public class Drag {
 			System.out.println("one chose any browser");
 		}
 		driver.get("https://the-internet.herokuapp.com/drag_and_drop");    		
-    WebElement From=driver.findElement(By.xpath("//div[@id='column-a']"));	
+    //WebElement From=driver.findElement(By.xpath("//div[@id='column-a']"));	
      		
-     WebElement To=driver.findElement(By.xpath("//div[@id='column-b']"));					
+     //WebElement To=driver.findElement(By.xpath("//div[@id='column-b']"));					
   		
      Actions act=new Actions(driver);					
 		
-     act.dragAndDrop(From, To).build().perform();
+     //act.dragAndDrop(From, To).build().perform();
+     act.dragAndDrop(driver.findElement(By.id("column-a")),driver.findElement(By.id("column-b"))).build().perform();
+     Thread.sleep(10000);
+     driver.quit();
 
 	}
 

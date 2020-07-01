@@ -24,6 +24,7 @@ public class Select {
 	    Thread.sleep(10000);
 		driver.findElement(By.id("checkBoxOption1")).click();
 		System.out.println(driver.findElement(By.cssSelector("input[id*='checkBoxOption1']")).isSelected());
+		driver.quit();
 
 	}
 	

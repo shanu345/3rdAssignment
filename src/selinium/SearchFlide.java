@@ -28,7 +28,7 @@ public class SearchFlide {
 		b.selectByVisibleText("1");
 		driver.findElement(By.id("SearchBtn")).click();
 		System.out.println(driver.findElement(By.xpath("(//strong[@class='resultsCount'])[1]")).getText());
-		
+		driver.quit();
 	}
 
 }

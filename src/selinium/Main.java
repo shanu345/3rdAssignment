@@ -29,6 +29,7 @@ public class Main {
 		System.out.println(driver.findElement(By.xpath("//table[@class='table table-hover']//tr[7]")).getText());
 		System.out.println(driver.findElement(By.xpath("//table[@class='table table-hover']//tr[1]/th[6]")).getText());
 		//System.out.println(driver.findElement(By.xpath("//table[@class='table table-hover']//tr[2]/td[6]")).getText());
+		 driver.quit();
 	}
 
 }
